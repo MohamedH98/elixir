@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Raleway", sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --clr-dark: #000;
+  --clr-light: #fff;
+  --clr-bg: #eee;
+  --clr-accent: #b0a4d3;
+
+  --fs-h1: 2.3rem;
+  --fs-h2: 1.9rem;
+  --fs-h3: 1.5rem;
+  --fs-p: 1.2rem;
+  --fs-small: 1rem;
+  --bs-primary: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: var(--clr-bg);
+  background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
+}
+.container-fluid {
+  padding: 3%;
+}
+nav {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  display: flex;
+  align-items: flex-start;
+  z-index: 5;
+  border-bottom: 2px solid var(--clr-dark);
+  padding: 2%;
+}
+.navbar-brand {
+  font-size: var(--fs-h2);
+  font-family: var(--ff-primary);
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+    background-color: var(--clr-accent);
+  }
+
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+}
+
+.breadcrumb-items {
+  list-style: none;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-small);
+}
+.breadcrumb-items + .breadcrumb-items::before {
+  content: "/";
+  display: inline-block;
+  color: var(--clr-dark);
+  padding: 0 0.5rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "curology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Mohamed Hassan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
+    "dotenv": "^8.2.0",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.7",
+    "multer-storage-cloudinary": "^4.0.0"
+  }
+}

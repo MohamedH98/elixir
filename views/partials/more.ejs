@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center row my-4">
+  <% rand.forEach(r => {%> <% if (products[r].name !== product.name) { %>
+  <div class="card col-9 col-md-4">
+    <a href="/products/<%= products[r].id%>"
+      ><img
+        src="<%= products[r].images[2].url %>"
+        class="card-img-top"
+        alt="..."
+    /></a>
+    <div class="card-body">
+      <h5 class="card-title"><%= products[r].name%></h5>
+      <p class="card-text text-muted">£<%= products[r].price%></p>
+    </div>
+  </div>
+  <% } %> <% }) %>
+</div>

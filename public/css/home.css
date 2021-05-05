@@ -1,0 +1,80 @@
+:root {
+  --ff-primary: "Raleway", sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --clr-dark: #000;
+  --clr-light: #fff;
+  --clr-bg: #eee;
+  --clr-accent: #f1c755;
+
+  --fs-h1: 2.3rem;
+  --fs-h2: 1.9rem;
+  --fs-h3: 1.5rem;
+  --fs-p: 1.2rem;
+  --fs-small: 1rem;
+  --bs-primary: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+.banner {
+  height: 300px;
+  background-image: url("https://images.unsplash.com/photo-1525904097878-94fb15835963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-position-y: -450px; */
+  background-size: cover;
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-accent);
+}
+.lead {
+  background-color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+}
+.banner-btn {
+  width: 200px;
+
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-accent);
+}
+
+.card {
+  position: relative;
+  background-color: none;
+  max-width: 400px;
+  min-width: 250px;
+}
+.card-body {
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.card-img-top {
+  max-width: 500px;
+  min-height: 230px;
+}
+.card-text {
+  color: var(--clr-dark);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-p);
+  font-family: var(--ff-primary);
+}
+.card-btn {
+  width: 50%;
+  min-width: 170px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-accent);
+}

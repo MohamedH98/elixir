@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= product.name %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <%- include('partials/nav')%>
+      <div>
+        <ul class="breakcrumb-list d-flex p-1">
+          <li class="breadcrumb-items py-4">
+            <a href="/" class="text-muted">Home</a>
+          </li>
+          <li class="breadcrumb-items py-4">
+            <a href="/products" class="text-muted">Products</a>
+          </li>
+          <li class="breadcrumb-items py-4">
+            <a href="#" class="text-muted"><%= product.name %></a>
+          </li>
+        </ul>
+      </div>
+      <div class="product row">
+        <div class="product-imgs col- col-lg-6">
+          <div class="row">
+            <div
+              class="preview-imgs col-4 d-flex flex-column justify-content-center"
+            >
+              <img class="preview-img my-2" src="<%= product.images[0].url%>" />
+              <img class="preview-img my-2" src="<%= product.images[1].url%>" />
+            </div>
+            <div class="col-8">
+              <img class="main-img my-2" src="<%= product.images[2].url%>" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-info-container col- col-lg-6 d-flex justify-content-center align-items-center"
+        >
+          <div
+            class="product-info m-3 d-flex flex-column justify-content-space-between"
+          >
+            <h1><%= product.name%></h1>
+            <h2 class="text-muted">£<%= product.price%>0</h2>
+            <hr />
+            <p class="product-text py-4"><%= product.description%></p>
+            <div class="input-holder input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn outline-dark btn-md" id="minus-btn">
+                  <i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <input
+                type="number"
+                id="qty_input"
+                class="form-control btn form-control-md"
+                value="3"
+              />
+              <div class="input-group-prepend">
+                <button class="btn btn-md" id="plus-btn">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="d-block mt-4">
+              <button class="btn btn-dark btn-md py-2">Add to cart</button>
+              <button class="btn btn-dark btn-md py-2 mx-3">Buy it now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommendations my-5">
+        <h2 class="m-5">You may also like...</h2>
+
+        <%- include('partials/more')%>
+      </div>
+    </div>
+
+    <%- include('partials/footer')%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
